@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+
+.container {
+    justify-self: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 500px;
+    min-height: 90vh;
+    margin: 20px auto;
+    padding: 10px 50px 30px 50px;
+    background-image: url('../img/fantastic-paper-wallpaper-45975-47257-hd-wallpapers.jpg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Handlee', cursive;
+    box-shadow: 10px 10px 25px #aaa;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+
+ul li {
+    list-style-type: square;
+}
+
+.remove-item-button {
+    cursor: pointer;
+    width: 20px;
+}
+
+input {
+    border: 1px solid #000 !important;
+    width: 70% !important;
+}
+
+@media(max-width: 768px) {
+    .container {
+        width: unset;
+        padding: 30px 10px !important;
+        margin: 0 auto !important;
+        height: 100vh;
+    }
+
+    input {
+        border: 1px solid #000 !important;
+        width: 70% !important;
+    }
+}

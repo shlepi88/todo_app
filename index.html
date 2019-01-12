@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+
+    <div id="app" class="container">
+        <h1>To Do List:</h1>
+        <div class="row">
+            <ul class="list" v-if="items.length">
+                <li v-for="(item, index) in items" :key="item">
+                    <p>{{item}}
+                        <span class="remove-item-button badge badge-danger" @click="remove(index)">
+                            -
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div v-if="!items.length" class="empty-list-msg">
+            <h4>List is empty.</h4>
+        </div>
+
+        <div class="d-flex flex-row justify-content-between">
+            <input type="text" placeholder="New task..." v-model="currentValue" class="form-control">
+            <button @click="add" :disabled="!currentValue" class="btn btn-primary">Add Task</button>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>    
+<script src="js/script.js"></script>    
+</body>
+</html>
